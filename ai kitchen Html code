@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Kitchen Assistant</title>
+</head>
+<body>
+    <h1>Welcome to AI Kitchen Assistant</h1>
+    <form action="/get_recipe" method="post">
+        <label for="ingredients">Enter Ingredients (comma-separated):</label>
+        <input type="text" id="ingredients" name="ingredients">
+        <button type="submit">Get Recipe</button>
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe</title>
+</head>
+<body>
+    <h1>Your Recipe</h1>
+    <p>{{ recipe }}</p>
+    <form action="/get_instructions" method="post">
+        <label for="recipe_name">Enter Recipe Name for Instructions:</label>
+        <input type="text" id="recipe_name" name="recipe_name">
+        <button type="submit">Get Instructions</button>
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cooking Instructions</title>
+</head>
+<body>
+    <h1>Cooking Instructions</h1>
+    <p>{{ instructions }}</p>
+</body>
+</html>
